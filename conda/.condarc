@@ -2,3 +2,4 @@ channels:
   - conda-forge
   - anaconda
 auto_activate_base: true
+channel_priority: flexible
