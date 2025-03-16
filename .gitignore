@@ -1,0 +1,5 @@
+vim/.vim/temp/swp/*
+vim/.vim/temp/backup/*
+vim/.vim/temp/undo/*
+vim/.vim/.netrwhist
+!.gitkeep
