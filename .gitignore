@@ -2,4 +2,9 @@ vim/.vim/temp/swp/*
 vim/.vim/temp/backup/*
 vim/.vim/temp/undo/*
 vim/.vim/.netrwhist
+
+fish/.config/fish/fish_variables
+
+
+
 !.gitkeep
