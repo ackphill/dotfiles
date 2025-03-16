@@ -4,6 +4,20 @@ if status is-interactive
     # fish_vi_key_bindings
 end
 
+function save_history --on-event fish_preexec
+  builtin history --save
+end
+
+function sync_history --on-event fish_postexec
+  builtin history --merge
+end
+
+function history
+  builtin history --reverse --show-time='%F %T '
+end
+
+
+
 # >>> mamba initialize >>>
 # !! Contents within this block are managed by 'mamba init' !!
 set -gx MAMBA_EXE "~/.local/bin/micromamba"
