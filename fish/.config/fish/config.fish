@@ -19,9 +19,9 @@ end
 
 
 # >>> mamba initialize >>>
-# !! Contents within this block are managed by 'mamba init' !!
-set -gx MAMBA_EXE "~/.local/bin/micromamba"
-set -gx MAMBA_ROOT_PREFIX "~/micromamba"
+# !! Contents within this block are managed by 'micromamba shell init' !!
+set -gx MAMBA_EXE "$HOME/.local/bin/micromamba"
+set -gx MAMBA_ROOT_PREFIX "$HOME/micromamba"
 if test -e $MAMBA_EXE
     $MAMBA_EXE shell hook --shell fish --root-prefix $MAMBA_ROOT_PREFIX | source
 end
