@@ -24,6 +24,7 @@ set -gx MAMBA_EXE "$HOME/.local/bin/micromamba"
 set -gx MAMBA_ROOT_PREFIX "$HOME/micromamba"
 if test -e $MAMBA_EXE
     $MAMBA_EXE shell hook --shell fish --root-prefix $MAMBA_ROOT_PREFIX | source
+    alias mm=micromamba
 end
 # <<< mamba initialize <<<
 
