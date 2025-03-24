@@ -1,7 +1,7 @@
 set -U fish_greeting
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    # fish_vi_key_bindings
+    fish_vi_key_bindings
 end
 
 function save_history --on-event fish_preexec
