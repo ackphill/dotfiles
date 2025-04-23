@@ -36,3 +36,8 @@ if test -f ~/.common_aliases
     source ~/.common_aliases
 end
 
+# $HOME/.local/bin이 존재하면 PATH에 추가
+if test -d $HOME/.local/bin
+    fish_add_path $HOME/.local/bin
+end
+
