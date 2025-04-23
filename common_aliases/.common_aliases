@@ -1,0 +1,4 @@
+alias ls='ls --time-style=+"%Y-%m-%d %H:%M:%S"'
+alias mm='micromamba'
+alias ls='ls --color'
+
