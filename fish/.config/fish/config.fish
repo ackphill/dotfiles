@@ -1,20 +1,33 @@
 set -U fish_greeting
 if status is-interactive
     # Commands to run in interactive sessions can go here
+    # Enable vi mode
     fish_vi_key_bindings
+    
+    # Cursor configuration
+    set fish_cursor_default block
+    set fish_cursor_insert line
+    set fish_cursor_replace_one underscore
+    set fish_cursor_visual block
+    set fish_cursor_external line
+    
+    # Force cursor shape changes (if using tmux)
+    set fish_vi_force_cursor
+
+    # history config
+    function save_history --on-event fish_preexec
+      builtin history --save
+    end
+
+    function sync_history --on-event fish_postexec
+      builtin history --merge
+    end
+
+    function history
+      builtin history --reverse --show-time='%F %T '
+    end
 end
 
-function save_history --on-event fish_preexec
-  builtin history --save
-end
-
-function sync_history --on-event fish_postexec
-  builtin history --merge
-end
-
-function history
-  builtin history --reverse --show-time='%F %T '
-end
 
 
 
